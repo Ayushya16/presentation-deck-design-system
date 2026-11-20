@@ -9,12 +9,37 @@ A universal, project-agnostic design system and AI skill for creating high-impac
 
 ---
 
+## 🚨 MANDATORY BAN ON "AI TELLS" & CLICHÉS (STRICT ENFORCEMENT)
+
+Human presentation designers, executives, and judges immediately spot and reject lazy AI-generated aesthetics. The following elements are **STRICTLY PROHIBITED** across all modes:
+
+1. **NO "AI Blue" / Generic Chatbot Indigo (`#2563EB`, `#3B82F6`):**
+   - **Banned:** Generic SaaS blue cards, glowing royal-blue boxes, electric indigo buttons, and standard "Copilot/ChatGPT" corporate blue.
+   - **Allowed Instead:** If using cool tones, use either grounded **Midnight Navy (`#0A192F`)** for Professional mode, or hyper-saturated **Electric Cyan (`#00F0FF`)** for Funky mode. Never generic chatbot blue.
+2. **NO AI Badges / Sparkles / Pill Outlines:**
+   - **Banned:** `✨ AI Insights`, `✦ Generated`, floating pill containers with borders around category kickers, and capsule tags that look like bot UI.
+   - **Allowed Instead:** Clean, raw, uppercase monospace text (`JetBrains Mono Bold`) hanging freely without bounding badge boxes.
+3. **NO Decorative Gradient Bars / Top Accent Lines:**
+   - **Banned:** 2px–4px colored accent lines running across the very top or bottom edge of the slide canvas, glowing neon border trims, or rainbow dividers.
+   - **Allowed Instead:** Grounded slide hierarchy where whitespace and bold typography create structure organically.
+4. **NO Glassmorphism / Frosted Blur / Glowing Blobs:**
+   - **Banned:** Background-blur cards (`backdrop-filter`), glowing neon halos around containers, and generic "neural net / circuit node" vector art.
+   - **Allowed Instead:** Solid, confident card fills, tactile editorial borders, or physical-world art textures (torn paper, soft matte splatters at 45%–65% opacity).
+5. **NO Fake Quantitative Metrics / Hallucinated Data:**
+   - **Banned:** Inventing fake stats like "94.2% operational efficiency gain" or "3.8x faster turnaround" unless explicitly provided in source context.
+   - **Allowed Instead:** Concrete qualitative operational mechanisms, structured milestones, and verifiable delivery commitments.
+6. **NO Em-Dashes (`—`) or Double Slashes (`//`):**
+   - **Banned:** `// KICKER` or bullet points with `—`.
+   - **Allowed Instead:** Use colons (`:`) or pipes (`|`).
+
+---
+
 ## 1. Quick Mode Selector
 
 When prompting an AI agent, specify the desired archetype:
 
 ```text
-"Design this deck in [Professional | Medium | Funky] mode."
+"Design this deck in [Professional | Medium | Funky] mode. Ensure zero AI tells."
 ```
 
 | Mode | Target Audience & Tone | Primary Visual Identifiers | Key Fonts |
@@ -81,7 +106,7 @@ Every slide adheres to a fixed widescreen 16:9 canvas layout:
 - **Color Palette:**
   - Primary Dark: Deep Navy `#0A192F` (`{ r: 0.039, g: 0.098, b: 0.184 }`)
   - Secondary Slate: `#334155` (`{ r: 0.2, g: 0.255, b: 0.333 }`)
-  - Accent Red/Blue: Deep Crimson `#991B1B` or Sapphire `#1D4ED8`
+  - Accent Red/Blue: Deep Crimson `#991B1B` or Sapphire `#1E40AF`
   - Neutral Borders: Hairline `#E2E8F0` (`{ r: 0.886, g: 0.910, b: 0.941 }`)
   - Card Fills: `#FFFFFF` with `1px` stroke or subtle background `#F1F5F9`.
 - **Card Styling:** Clean white containers with subtle `1px` border, `8px`–`12px` corner radii. No drop shadows; strict geometric discipline.
@@ -158,13 +183,3 @@ Every slide adheres to a fixed widescreen 16:9 canvas layout:
 4. **Color Conversion:** Never use `0–255`. Divide RGB values by 255 (e.g. `{ r: 161/255, g: 255/255, b: 95/255 }`).
 5. **Output Serialization Guard:** Never return raw node dumps over 48 KB. Return clean structured summaries: `{ status: "success", slideId: slide.id, name: slide.name }`.
 6. **Visual Screenshot Check:** Always capture screenshots with `get_screenshot`, download via `curl.exe`, and inspect with `read_file` to confirm layout integrity and zero text clipping.
-
----
-
-## 7. Additional References
-
-- See `references/typography-and-fonts.md` for complete font pairings and type ramp.
-- See `references/professional-mode.md` for corporate / MBB blueprints.
-- See `references/medium-editorial-mode.md` for *The Ken* / editorial layout blueprints.
-- See `references/funky-poppy-mode.md` for poppy brutalism blueprints.
-- See `references/figma-mcp-guide.md` for production-tested Plugin API scripts.
